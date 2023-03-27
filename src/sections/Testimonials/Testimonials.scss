@@ -1,0 +1,125 @@
+@import "../../global.scss";
+
+.testimonials {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    @include titleColor;
+    font-weight: 700;
+    font-family: "Cinzel", serif;
+    letter-spacing: 1.5px;
+    font-size: 50px;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+      transition: all 1s ease;
+      width: 300px;
+      height: 75%;
+      margin: 0 30px;
+      background: linear-gradient(to bottom, lightgray 25%, rgb(168, 59, 81));
+      box-shadow: 0px 0px 15px rgba(79, 79, 79, 0.4);
+      position: relative;
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+        transition: all 1s ease-in;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .right {
+          .icon {
+            font-size: 50px;
+            color: white;
+
+            &:hover {
+              color: rgb(144, 34, 56);
+            }
+          }
+        }
+        img {
+          &.user {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 50px;
+            box-shadow: 0px 0px 5px rgba(79, 79, 79, 0.4);
+          }
+        }
+      }
+
+      .center {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(250, 244, 245);
+
+        &::before {
+          content: "\201C";
+          position: absolute;
+          top: 145px;
+          left: 17.5px;
+          line-height: 1;
+          font-size: 150px;
+          color: lightgrey;
+          font-family: sans-serif;
+          z-index: 1;
+        }
+        &::before {
+          content: "\201C";
+          position: absolute;
+          top: 145px;
+          left: 17.5px;
+          line-height: 1;
+          font-size: 150px;
+          color: lightgrey;
+          font-family: sans-serif;
+          z-index: 1;
+        }
+        p {
+          z-index: 2;
+          position: relative;
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          margin-bottom: 5px;
+          color: white;
+        }
+        h4 {
+          color: lightgray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$mainColor: #15023a;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin titleColor {
+  background: linear-gradient(to right, rgb(162, 15, 44), rgb(215, 95, 119));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bold-text {
+  font-size: 15px;
+  font-weight: 800;
+  color: black;
+  text-align: left;
+}
+
+.p-text {
+  font-size: 12px;
+  text-align: left;
+  color: gray;
+  line-height: 1.5;
+}

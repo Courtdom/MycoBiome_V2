@@ -1,0 +1,224 @@
+@import "../../global.scss";
+@mixin center-absolute-round {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.75;
+  box-shadow: 0px 0px 15px rgba(255, 85, 85, 0.6);
+  overflow: hidden;
+  opacity: 0;
+  img {
+    height: 65px;
+    width: 65px;
+  }
+}
+@mixin icon-delayed-transition($delay) {
+  transition: all 0.25s ease-in $delay;
+  opacity: 1;
+}
+@mixin title-delayed-transition($delay) {
+  transition: all 0.5s ease-in $delay;
+  opacity: 1;
+}
+
+.intro {
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 700px;
+      height: 700px;
+      background-image: linear-gradient(to top, crimson, lightgray);
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+      position: relative;
+      box-shadow: 0px 0px 15px rgba(255, 85, 85, 0.3);
+      opacity: 0;
+      transform: translateX(-200px);
+      // transition: transform 1s ease-in-out;
+      .profileImg {
+        opacity: 0;
+        height: 900px;
+        width: auto;
+        position: absolute;
+      }
+
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 1s ease-in;
+        .profileImg {
+          opacity: 1;
+
+          transition: all 1s ease-in 1s;
+        }
+      }
+
+      .iconContainer {
+        &.active {
+          .giticon {
+            @include icon-delayed-transition(1.5s);
+          }
+          .javaicon {
+            @include icon-delayed-transition(1.75s);
+          }
+          .reacticon {
+            @include icon-delayed-transition(2s);
+          }
+
+          .sassicon {
+            @include icon-delayed-transition(2.25s);
+          }
+          .hikingicon {
+            @include icon-delayed-transition(2.5s);
+          }
+          .bookicon {
+            @include icon-delayed-transition(2.75s);
+          }
+          .podcasticon {
+            @include icon-delayed-transition(3s);
+          }
+          .wrestlingicon {
+            @include icon-delayed-transition(3.25s);
+          }
+        }
+
+        .giticon {
+          @include center-absolute-round;
+          transform: translateY(415px) translateX(200px);
+          img {
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .javaicon {
+          @include center-absolute-round;
+          transform: translateY(275px) translateX(185px);
+        }
+        .reacticon {
+          @include center-absolute-round;
+          transform: translateY(150px) translateX(140px);
+        }
+        .sassicon {
+          @include center-absolute-round;
+          transform: translateY(50px) translateX(35px);
+          img {
+            width: 75px;
+            height: 75px;
+          }
+        }
+        .hikingicon {
+          @include center-absolute-round;
+          transform: translateY(50px) translateX(-150px);
+        }
+        .bookicon {
+          @include center-absolute-round;
+          transform: translateY(150px) translateX(-250px);
+          img {
+            border-radius: 50%;
+          }
+        }
+        .podcasticon {
+          @include center-absolute-round;
+          transform: translateY(275px) translateX(-295px);
+          img {
+            border-radius: 50%;
+          }
+        }
+
+        .wrestlingicon {
+          @include center-absolute-round;
+          transform: translateY(415px) translateX(-310px);
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 55px;
+        margin: 10px 0px;
+        opacity: 0;
+      }
+      h2 {
+        font-size: 35px;
+        opacity: 0;
+      }
+      h3 {
+        font-size: 30px;
+        opacity: 0;
+        span {
+          font-size: 35px;
+          color: crimson;
+          font-family: "Dosis", sans-serif;
+        }
+
+        .typed-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+
+      &.active {
+        h1 {
+          @include title-delayed-transition(3.5s);
+        }
+        h2 {
+          @include title-delayed-transition(3s);
+        }
+        h3 {
+          @include title-delayed-transition(4s);
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 30%;
+      img {
+        width: 30px;
+        animation: arrowBlink 4s infinite;
+        cursor: pointer;
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
