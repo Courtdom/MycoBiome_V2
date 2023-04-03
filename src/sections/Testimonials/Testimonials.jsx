@@ -27,20 +27,16 @@ export default function Testimonials() {
   }, [myRef]);
 
   return (
-    <div className="testimonials" id="testimonials">
+    <div className="testimonials" id="testimonials" ref={myRef}>
       <h1>Testimonials</h1>
       <div className="container">
         {testimonialData.map((d) => (
-          <div ref={myRef} className={`card ${isInView ? "active" : ""}`}>
+          <div className={`card ${isInView ? "active" : ""}`}>
             <div className="top">
               <img className="user" src={d.img} alt="" />
 
               <div className="right">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.linkedin.com/in/matthew-courtnell-3413111b5/"
-                >
+                <a target="_blank" rel="noreferrer" href={d.linked}>
                   <BsLinkedin className="icon" />
                 </a>
               </div>

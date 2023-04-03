@@ -7,17 +7,28 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: $gray;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0.75;
-  box-shadow: 0px 0px 15px rgba(255, 85, 85, 0.6);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+
   overflow: hidden;
   opacity: 0;
+
+  @include mobileLarge {
+    height: 45px;
+    width: 45px;
+  }
   img {
     height: 65px;
     width: 65px;
+
+    @include mobileLarge {
+      height: 40px;
+      width: 40px;
+    }
   }
 }
 @mixin icon-delayed-transition($delay) {
@@ -30,42 +41,115 @@
 }
 
 .intro {
-  background-color: white;
+  background-image: linear-gradient(
+    to top,
+    rgb(249, 249, 249) 0%,
+    rgb(212, 214, 216) 50%,
+    rgb(189, 192, 198) 80%,
+    rgb(164, 170, 175) 100%
+  );
+
   display: flex;
+
+  @include mobileLarge {
+    flex-direction: column;
+  }
 
   .left {
     flex: 0.5;
     overflow: hidden;
 
     .imgContainer {
-      width: 700px;
-      height: 700px;
-      background-image: linear-gradient(to top, crimson, lightgray);
+      width: 675px;
+      height: 675px;
+      background-image: linear-gradient(to top, $primary-Color, $gray);
       border-radius: 50%;
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: center;
       float: right;
       position: relative;
-      box-shadow: 0px 0px 15px rgba(255, 85, 85, 0.3);
+      box-shadow: 0px 0px 5px rgba(60, 110, 113, 0.3);
+
       opacity: 0;
-      transform: translateX(-200px);
-      // transition: transform 1s ease-in-out;
+      transform: translateX(-350px);
+      overflow: hidden;
+
       .profileImg {
         opacity: 0;
         height: 900px;
         width: auto;
         position: absolute;
+        top: -250px;
       }
 
       &.active {
         opacity: 1;
         transform: translateX(0);
-        transition: all 1s ease-in;
+        transition: all 0.75s ease-in;
         .profileImg {
           opacity: 1;
+          transition: all 1s ease-in 0.75s;
+        }
+      }
+      @include laptop {
+        width: 800px;
+        height: 800px;
+        transform: translateX(-350px);
 
-          transition: all 1s ease-in 1s;
+        .profileImg {
+          opacity: 0;
+          height: 900px;
+          width: auto;
+          position: absolute;
+          top: -200px;
+        }
+
+        &.active {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.75s ease-in;
+          .profileImg {
+            opacity: 1;
+            transition: all 1s ease-in 0.75s;
+          }
+        }
+      }
+      @include tablet {
+        width: 650px;
+        height: 700px;
+        transform: translate(-150px, 150px);
+
+        .profileImg {
+          opacity: 0;
+          height: 900px;
+          width: auto;
+          position: absolute;
+          top: -200px;
+        }
+
+        &.active {
+          opacity: 1;
+          transform: translate(0, 150px);
+          transition: all 0.75s ease-in;
+          .profileImg {
+            opacity: 1;
+            transition: all 1s ease-in 0.75s;
+          }
+        }
+      }
+
+      @include mobileLarge {
+        width: 400px;
+        height: 400px;
+
+        position: absolute;
+        top: -125px;
+        .profileImg {
+          height: 800px;
+          width: auto;
+          position: absolute;
+          top: -225px;
         }
       }
 
@@ -75,75 +159,140 @@
             @include icon-delayed-transition(1.5s);
           }
           .javaicon {
-            @include icon-delayed-transition(1.75s);
+            @include icon-delayed-transition(1.7s);
           }
           .reacticon {
-            @include icon-delayed-transition(2s);
+            @include icon-delayed-transition(1.9s);
           }
 
           .sassicon {
-            @include icon-delayed-transition(2.25s);
+            @include icon-delayed-transition(2.1s);
           }
-          .hikingicon {
-            @include icon-delayed-transition(2.5s);
+
+          .nodeicon {
+            @include icon-delayed-transition(2.3s);
           }
           .bookicon {
-            @include icon-delayed-transition(2.75s);
+            @include icon-delayed-transition(2.5s);
           }
           .podcasticon {
-            @include icon-delayed-transition(3s);
+            @include icon-delayed-transition(2.7s);
           }
           .wrestlingicon {
-            @include icon-delayed-transition(3.25s);
+            @include icon-delayed-transition(2.9s);
           }
         }
 
         .giticon {
           @include center-absolute-round;
-          transform: translateY(415px) translateX(200px);
-          img {
-            width: 80px;
-            height: 80px;
+          transform: translateY(405px) translateX(220px);
+
+          @include laptop {
+            transform: translateY(390px) translateX(270px);
+          }
+          @include tablet {
+            transform: translateY(490px) translateX(170px);
+          }
+          @include mobileLarge {
+            transform: translateY(265px) translateX(120px);
           }
         }
+
         .javaicon {
           @include center-absolute-round;
-          transform: translateY(275px) translateX(185px);
+          transform: translateY(295px) translateX(205px);
+          @include laptop {
+            transform: translateY(265px) translateX(245px);
+          }
+          @include tablet {
+            transform: translateY(390px) translateX(195px);
+          }
+          @include mobileLarge {
+            transform: translateY(185px) translateX(130px);
+          }
         }
         .reacticon {
           @include center-absolute-round;
-          transform: translateY(150px) translateX(140px);
+          transform: translateY(180px) translateX(180px);
+          @include laptop {
+            transform: translateY(160px) translateX(190px);
+          }
+          @include tablet {
+            transform: translateY(285px) translateX(220px);
+          }
+          @include mobileLarge {
+            transform: translateY(95px) translateX(110px);
+          }
         }
         .sassicon {
           @include center-absolute-round;
-          transform: translateY(50px) translateX(35px);
-          img {
-            width: 75px;
-            height: 75px;
+          transform: translateY(80px) translateX(120px);
+          @include laptop {
+            transform: translateY(70px) translateX(115px);
+          }
+          @include tablet {
+            transform: translateY(180px) translateX(195px);
+          }
+          @include mobileLarge {
+            transform: translateY(40px) translateX(30px);
           }
         }
-        .hikingicon {
+        .nodeicon {
           @include center-absolute-round;
-          transform: translateY(50px) translateX(-150px);
+          transform: translateY(20px) translateX(10px);
+          @include laptop {
+            transform: translateY(15px) translateX(15px);
+          }
+          @include tablet {
+            transform: translateY(90px) translateX(130px);
+          }
+          @include mobileLarge {
+            transform: translateY(40px) translateX(-70px);
+          }
         }
+
         .bookicon {
           @include center-absolute-round;
-          transform: translateY(150px) translateX(-250px);
-          img {
-            border-radius: 50%;
+
+          transform: translateY(20px) translateX(-110px);
+
+          @include laptop {
+            transform: translateY(10px) translateX(-90px);
+          }
+          @include tablet {
+            transform: translateY(40px) translateX(40px);
+          }
+          @include mobileLarge {
+            transform: translateY(95px) translateX(-150px);
           }
         }
         .podcasticon {
           @include center-absolute-round;
-          transform: translateY(275px) translateX(-295px);
+          transform: translateY(80px) translateX(-220px);
           img {
             border-radius: 50%;
+          }
+          @include tablet {
+            transform: translateY(20px) translateX(-60px);
+          }
+
+          @include mobileLarge {
+            transform: translateY(175px) translateX(-170px);
           }
         }
 
         .wrestlingicon {
           @include center-absolute-round;
-          transform: translateY(415px) translateX(-310px);
+          img {
+            width: 40px;
+          }
+          transform: translateY(180px) translateX(-260px);
+          @include mobileLarge {
+            transform: translateY(245px) translateX(-160px);
+            img {
+              width: 20px;
+            }
+          }
         }
       }
     }
@@ -164,17 +313,20 @@
         font-size: 55px;
         margin: 10px 0px;
         opacity: 0;
+        color: $black;
       }
       h2 {
         font-size: 35px;
         opacity: 0;
+        color: $black;
       }
       h3 {
         font-size: 30px;
         opacity: 0;
+        color: $black;
         span {
           font-size: 35px;
-          color: crimson;
+          color: $secondary-Color;
           font-family: "Dosis", sans-serif;
         }
 
@@ -188,6 +340,37 @@
           }
           100% {
             opacity: 0;
+          }
+        }
+      }
+      @include tablet {
+        h1 {
+          font-size: 55px;
+          margin: 10px 0px;
+          opacity: 0;
+        }
+        h2 {
+          font-size: 35px;
+          opacity: 0;
+        }
+        h3 {
+          font-size: 25px;
+          opacity: 0;
+          span {
+            font-size: 25px;
+          }
+
+          .typed-cursor {
+            animation: blink 1s infinite;
+          }
+
+          @keyframes blink {
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
           }
         }
       }

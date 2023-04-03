@@ -9,8 +9,8 @@ const Intro = () => {
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
-      backDelay: 1500,
-      backSpeed: 60,
+      backDelay: 1200,
+      backSpeed: 50,
 
       strings: ["Web Developer", "Front End Developer", "React Developer"],
     });
@@ -20,7 +20,7 @@ const Intro = () => {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     if (myRef.current) {
@@ -35,9 +35,9 @@ const Intro = () => {
   }, [myRef]);
 
   return (
-    <div className="intro" id="intro">
+    <div className="intro" id="intro" ref={myRef}>
       <div className="left">
-        <div ref={myRef} className={`imgContainer ${isInView ? "active" : ""}`}>
+        <div className={`imgContainer ${isInView ? "active" : ""}`}>
           <img src="assets/profile.png" alt="profile" className="profileImg" />
 
           <div className={`iconContainer ${isInView ? "active" : ""}`}>
@@ -53,17 +53,17 @@ const Intro = () => {
             <div className="sassicon">
               <img src="assets/sass.png" alt="sassicon" />
             </div>
-            <div className="hikingicon">
-              <img src="assets/hiking.png" alt="webdevicon" />
+            <div className="nodeicon">
+              <img src="assets/node.png" alt="webdevicon" />
             </div>
             <div className="bookicon">
-              <img src="assets/book.png" alt="bookicon" />
+              <img src="assets/python.png" alt="bookicon" />
             </div>
             <div className="podcasticon">
-              <img src="assets/podcast.png" alt="podcasticon" />
+              <img src="assets/figma.png" alt="podcasticon" />
             </div>
             <div className="wrestlingicon">
-              <img src="assets/wrestling.png" alt="wrestlingicon" />
+              <img src="assets/MongoDB.png" alt="wrestlingicon" />
             </div>
           </div>
         </div>

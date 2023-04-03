@@ -1,9 +1,30 @@
 import "./Works.scss";
 import { worksData } from "../../constants/data";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Works = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const workRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (workRef.current) {
+      observer.observe(workRef.current);
+    }
+
+    return () => {
+      if (workRef.current) {
+        observer.unobserve(workRef.current);
+      }
+    };
+  }, [workRef]);
 
   const handleClick = (way) => {
     way === "left"
@@ -14,8 +35,8 @@ const Works = () => {
   };
 
   return (
-    <div className="works" id="works">
-      <h1>Skills</h1>
+    <div className="works" id="works" ref={workRef}>
+      <h1>SKILLS</h1>
       <div
         className="slider"
         style={{
@@ -25,7 +46,7 @@ const Works = () => {
         {worksData.map((d) => (
           <div
             className={`container ${
-              parseInt(d.id) === currentSlide + 1 ? "active" : ""
+              parseInt(d.id) === currentSlide + 1 && isInView ? "active" : ""
             }`}
           >
             <div className="item">
@@ -33,7 +54,9 @@ const Works = () => {
                 <div className="leftContainer">
                   <h2
                     className={`${
-                      parseInt(d.id) === currentSlide + 1 ? " active" : ""
+                      parseInt(d.id) === currentSlide + 1 && isInView
+                        ? "active"
+                        : ""
                     }`}
                   >
                     {d.title}
@@ -43,7 +66,9 @@ const Works = () => {
                   </div> */}
                   <p
                     className={`${
-                      parseInt(d.id) === currentSlide + 1 ? " active" : ""
+                      parseInt(d.id) === currentSlide + 1 && isInView
+                        ? "active"
+                        : ""
                     }`}
                   >
                     {d.desc}
@@ -55,7 +80,9 @@ const Works = () => {
                   src={d.icon}
                   alt="mobile"
                   className={`${
-                    parseInt(d.id) === currentSlide + 1 ? " active" : ""
+                    parseInt(d.id) === currentSlide + 1 && isInView
+                      ? "active"
+                      : ""
                   }`}
                 />
               </div>

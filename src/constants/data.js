@@ -1,6 +1,7 @@
 export const featuredPortfolio = [
   {
-    id: 1,
+    id: 1443,
+    selectedId: "featured",
     title: "Cold Realm",
     img: "assets/coldrealm.png",
     img: "assets/coldrealm.png",
@@ -14,7 +15,8 @@ export const featuredPortfolio = [
     desc: "Platformer solo project made using C# and Unity",
   },
   {
-    id: 2,
+    id: 25434,
+    selectedId: "featured",
     title: "Dashboard Management",
     img: "assets/dashboard.png",
     images: [
@@ -24,10 +26,11 @@ export const featuredPortfolio = [
     ],
     projectLink: "https://shoppy-dashboard-eta.vercel.app/",
     codeLink: "https://github.com/Courtdom/dashboard-project",
-    desc: "Dashboard management site using React, Tailwind and SyncFusion",
+    desc: "Dashboard management site using React and SyncFusion",
   },
   {
-    id: 3,
+    id: 345345,
+    selectedId: "featured",
     title: "Natours Travel",
     img: "assets/natours.png",
     images: [
@@ -41,7 +44,8 @@ export const featuredPortfolio = [
   },
 
   {
-    id: 4,
+    id: 445343,
+    selectedId: "featured",
     title: "Lyriks Music App",
     img: "assets/Lyrics.png",
     images: [
@@ -56,7 +60,8 @@ export const featuredPortfolio = [
 ];
 export const webPortfolio = [
   {
-    id: 1,
+    id: 1437,
+    selectedId: "web",
     title: "Realtor Website",
     img: "assets/Realtor.png",
     images: [
@@ -70,7 +75,8 @@ export const webPortfolio = [
   },
 
   {
-    id: 3,
+    id: 2927,
+    selectedId: "web",
     title: "Dashboard Management",
     img: "assets/dashboard.png",
     images: [
@@ -80,11 +86,12 @@ export const webPortfolio = [
     ],
     projectLink: "https://shoppy-dashboard-eta.vercel.app/",
     codeLink: "https://github.com/Courtdom/dashboard-project",
-    desc: "Dashboard management site using React, Tailwind and SyncFusion",
+    desc: "Dashboard management site using React and SyncFusion",
   },
 
   {
-    id: 3,
+    id: 3834,
+    selectedId: "web",
     title: "Lyriks Music App",
     img: "assets/Lyrics.png",
     images: [
@@ -96,10 +103,21 @@ export const webPortfolio = [
     codeLink: "https://github.com/Courtdom/Lyriks",
     desc: "Spotify clone using APIs, React and Redux",
   },
+  {
+    id: 4881,
+    selectedId: "web",
+    title: "Meta Madness",
+    img: "assets/meta.png",
+    images: ["assets/meta-1.png", "assets/meta-2.png", "assets/meta-3.png"],
+    projectLink: "https://metaversus-three-drab.vercel.app/",
+    codeLink: "https://github.com/Courtdom/Metaversus",
+    desc: "Landing Page using Framer Motion and Tailwind",
+  },
 ];
 export const designPortfolio = [
   {
-    id: 1,
+    id: 1375,
+    selectedId: "design",
     title: "Natours Travel",
     img: "assets/natours.png",
     images: [
@@ -112,7 +130,8 @@ export const designPortfolio = [
     desc: "Tour guide Landing Page highlighting SCSS styling",
   },
   {
-    id: 2,
+    id: 2754,
+    selectedId: "design",
     title: "Gericht Restaurant",
     img: "assets/restaurant.png",
     images: [
@@ -126,7 +145,8 @@ export const designPortfolio = [
   },
 
   {
-    id: 3,
+    id: 3556,
+    selectedId: "design",
     title: "Meta Madness",
     img: "assets/meta.png",
     images: ["assets/meta-1.png", "assets/meta-2.png", "assets/meta-3.png"],
@@ -135,7 +155,8 @@ export const designPortfolio = [
     desc: "Landing Page using Framer Motion and Tailwind",
   },
   {
-    id: 4,
+    id: 4534,
+    selectedId: "design",
     title: "Hoobank",
     img: "assets/hoobank.png",
     images: [
@@ -150,7 +171,8 @@ export const designPortfolio = [
 ];
 export const reactPortfolio = [
   {
-    id: 1,
+    id: 1443,
+    selectedId: "react",
     title: "Realtor Website",
     img: "assets/Realtor.png",
     images: [
@@ -164,7 +186,8 @@ export const reactPortfolio = [
   },
 
   {
-    id: 2,
+    id: 2335,
+    selectedId: "react",
     title: "Dashboard Management",
     img: "assets/dashboard.png",
     images: [
@@ -174,11 +197,12 @@ export const reactPortfolio = [
     ],
     projectLink: "https://shoppy-dashboard-eta.vercel.app/",
     codeLink: "https://github.com/Courtdom/dashboard-project",
-    desc: "Dashboard management site using React, Tailwind and SyncFusion",
+    desc: "Dashboard management site using React and SyncFusion",
   },
 
   {
-    id: 3,
+    id: 3998,
+    selectedId: "react",
     title: "Lyriks Music App",
     img: "assets/Lyrics.png",
     images: [
@@ -191,7 +215,8 @@ export const reactPortfolio = [
     desc: "Spotify clone using APIs, React and Redux",
   },
   {
-    id: 4,
+    id: 4881,
+    selectedId: "react",
     title: "Meta Madness",
     img: "assets/meta.png",
     images: ["assets/meta-1.png", "assets/meta-2.png", "assets/meta-3.png"],
@@ -229,18 +254,20 @@ export const testimonialData = [
     id: 1,
     name: "Maxim Maltsev",
     title: "Senior Developer, Buchbaum",
-    img: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    img: "./assets/maxim.jpeg",
     icon: "assets/mobile.png",
     desc: "Matthew was an invaluable asset to our website project. He was able to enhance the visual appeal of our site with his skillful use of attractive styles and animations, while also being a great communicator throughout the process",
     featured: true,
+    linked: "https://www.linkedin.com/in/maximmaltsev/",
   },
   {
     id: 2,
-    name: "Donatas",
+    name: "Donatas Ahinsa",
     title: "Co-Founder, MycoBiome",
-    img: "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    img: "./assets/donatas.jpg",
     icon: "assets/mobile.png",
     desc: "Matthew developed my ecommerce website for my business.He far exceeded my expectations, always had great communication skills and always patient enough to work through my ideas and convert them into a website I'm very proud to own",
     featured: true,
+    linked: "https://www.linkedin.com/in/donatas-ahinsa-5762ba201/",
   },
 ];

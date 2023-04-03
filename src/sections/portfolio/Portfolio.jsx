@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PortfolioList from "../../components/portfoliolist/PortfolioList";
 import "./Portfolio.scss";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
@@ -27,6 +27,27 @@ function ImageSlider({ images, duration }) {
 const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
+  const portRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (portRef.current) {
+      observer.observe(portRef.current);
+    }
+
+    return () => {
+      if (portRef.current) {
+        observer.unobserve(portRef.current);
+      }
+    };
+  }, [portRef]);
 
   const list = [
     {
@@ -45,10 +66,6 @@ const Portfolio = () => {
       id: "react",
       title: "React",
     },
-    {
-      id: "mobile",
-      title: "Mobile App",
-    },
   ];
 
   useEffect(() => {
@@ -65,9 +82,6 @@ const Portfolio = () => {
       case "react":
         setData(reactPortfolio);
         break;
-      case "mobile":
-        setData(mobilePortfolio);
-        break;
       default:
         setData(featuredPortfolio);
         break;
@@ -76,7 +90,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>PORTFOLIO</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -87,9 +101,14 @@ const Portfolio = () => {
           />
         ))}
       </ul>
-      <div className="container">
+      <div className="container" ref={portRef}>
         {data.map((d, index) => (
-          <div className="item" key={index}>
+          <div
+            className={`item ${
+              selected === d.selectedId && isInView && "active"
+            }`}
+            key={index}
+          >
             <ImageSlider images={d.images} duration={3000} />
             <div className="iconContainer">
               <a href={d.projectLink} target="_blank" rel="noreferrer">
