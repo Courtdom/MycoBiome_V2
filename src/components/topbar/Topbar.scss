@@ -32,7 +32,7 @@
       flex: 0.5;
 
       .logo {
-        font-size: 40px;
+        font-size: 45px;
         font-weight: 700;
         text-decoration: none;
         color: inherit;
@@ -53,19 +53,25 @@
         }
 
         .icon {
-          font-size: 30px;
+          font-size: 35px;
         }
         @include tablet {
           margin-left: 50px;
           .icon {
-            font-size: 25px;
+            font-size: 30px;
           }
         }
 
         span {
           margin-top: 5px;
-          font-size: 8px;
+          font-size: 12px;
           font-weight: 500;
+          @include laptop {
+            font-size: 10px;
+          }
+          @include tablet {
+            font-size: 9.25px;
+          }
         }
       }
     }
@@ -86,8 +92,12 @@
         }
 
         .icon {
-          font-size: 35px;
+          font-size: 40px;
           color: $black;
+
+          @include laptop {
+            font-size: 35px;
+          }
 
           &:hover {
             color: $secondary-Color;
@@ -98,7 +108,7 @@
           margin-right: 90px;
 
           .icon {
-            font-size: 27.5px;
+            font-size: 32px;
           }
         }
       }
