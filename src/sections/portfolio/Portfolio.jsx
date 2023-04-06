@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import PortfolioList from "../../components/portfoliolist/PortfolioList";
+// import ImageSlider from "../../components/imageSlider/ImageSlider";
 import "./Portfolio.scss";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import {
@@ -56,7 +57,7 @@ const Portfolio = () => {
     },
     {
       id: "web",
-      title: "Web App",
+      title: "Webdev",
     },
     {
       id: "design",
@@ -110,6 +111,7 @@ const Portfolio = () => {
             key={index}
           >
             <ImageSlider images={d.images} duration={3000} />
+
             <div className="iconContainer">
               <a href={d.projectLink} target="_blank" rel="noreferrer">
                 <div>

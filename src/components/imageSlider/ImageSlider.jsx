@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ImageSlider.scss";
 
-const ImageSlider = ({ images, duration }) => {
+function ImageSlider({ images, duration }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -13,10 +13,17 @@ const ImageSlider = ({ images, duration }) => {
   }, [images, duration]);
 
   return (
-    <div className="image-slider">
-      <img src={images[currentIndex]} alt="sliding" />
+    <div className="slider">
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt="sliding"
+          className={`slide ${index === currentIndex ? "active" : ""}`}
+        />
+      ))}
     </div>
   );
-};
+}
 
 export default ImageSlider;

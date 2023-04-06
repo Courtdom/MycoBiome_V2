@@ -1,0 +1,56 @@
+@import "../../global.scss";
+
+.portfolioList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 5px 10px;
+  padding: 5px 5px;
+  overflow: hidden;
+  color: $primary-Color;
+  font-weight: 700;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: $gray;
+  transition: all 1s ease;
+  overflow: hidden;
+  padding: 7.5px 15px;
+  border: 1px solid $primary-Color;
+
+  @include laptop {
+    font-size: 10px;
+    margin: 5px 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  @include tablet {
+    font-size: 20px;
+    margin: 5px 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+  @include mobileLarge {
+    font-size: 15px;
+    margin: 2px 5px;
+    font-weight: 600;
+    border-radius: 3.5px;
+    padding: 10px 10px;
+  }
+  @include mobileSmall {
+    font-size: 12.5px;
+    margin: 5px 5px;
+    font-weight: 600;
+    border-radius: 3.5px;
+    padding: 10px 10px;
+  }
+
+  &.active {
+    background-color: $primary-Color;
+    color: $gray;
+    border: 1px solid $primary-Color;
+    transition: all 0.75s ease-in;
+  }
+}

@@ -1,12 +1,12 @@
 @import "../../global.scss";
 
 .menu {
-  width: 300px;
+  width: 30rem;
   height: 100vh;
   background-color: $secondary-Color;
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -30rem;
 
   z-index: 2;
 
