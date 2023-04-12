@@ -102,12 +102,11 @@
         width: auto;
         position: absolute;
         top: -22.5rem;
-        right: 0;
+        right: -2.5rem;
 
         @include respond(phone) {
           height: 60rem;
           top: -12.5rem;
-          right: -2.5rem;
         }
       }
 
