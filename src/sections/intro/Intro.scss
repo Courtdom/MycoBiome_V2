@@ -21,6 +21,15 @@
     height: 7rem;
     width: 7rem;
   }
+
+  @include respond(phone) {
+    width: 6rem;
+    height: 6rem;
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
 }
 @mixin icon-delayed-transition($delay) {
   transition: all 0.25s ease-in $delay;
@@ -78,12 +87,25 @@
         margin-top: 10rem;
       }
 
+      @include respond(phone) {
+        margin-top: 0.5rem;
+        width: 42.5rem;
+        height: 42.5rem;
+      }
+
       .profileImg {
         opacity: 0;
         height: 85rem;
         width: auto;
         position: absolute;
         top: -22.5rem;
+        right: 0;
+
+        @include respond(phone) {
+          height: 60rem;
+          top: -12.5rem;
+          right: -2.5rem;
+        }
       }
 
       &.active {
@@ -129,32 +151,53 @@
         .giticon {
           @include center-absolute-round;
           transform: translateY(38rem) translateX(17rem);
+          @include respond(phone) {
+            transform: translateY(25rem) translateX(11rem);
+          }
         }
 
         .javaicon {
           @include center-absolute-round;
           transform: translateY(25rem) translateX(20rem);
+          @include respond(phone) {
+            transform: translateY(15.5rem) translateX(13rem);
+          }
         }
         .reacticon {
           @include center-absolute-round;
           transform: translateY(12rem) translateX(14rem);
+          @include respond(phone) {
+            transform: translateY(8rem) translateX(8rem);
+          }
         }
         .sassicon {
           @include center-absolute-round;
           transform: translateY(3rem) translateX(3rem);
+          @include respond(phone) {
+            transform: translateY(2rem) translateX(1rem);
+          }
         }
         .nodeicon {
           @include center-absolute-round;
           transform: translateY(3rem) translateX(-11rem);
+          @include respond(phone) {
+            transform: translateY(2rem) translateX(-7rem);
+          }
         }
 
         .bookicon {
           @include center-absolute-round;
           transform: translateY(12rem) translateX(-22rem);
+          @include respond(phone) {
+            transform: translateY(8rem) translateX(-15rem);
+          }
         }
         .podcasticon {
           @include center-absolute-round;
           transform: translateY(25rem) translateX(-28rem);
+          @include respond(phone) {
+            transform: translateY(15.5rem) translateX(-19rem);
+          }
         }
 
         .wrestlingicon {
@@ -163,18 +206,12 @@
             width: 4rem;
           }
           transform: translateY(38rem) translateX(-26rem);
-          // @include laptop {
-          //   transform: translateY(15px) translateX(-100px);
-          // }
-          // @include tablet {
-          //   transform: translateY(20px) translateX(-150px);
-          // }
-          // @include mobileLarge {
-          //   transform: translateY(245px) translateX(-160px);
-          //   img {
-          //     width: 20px;
-          //   }
-          // }
+          @include respond(phone) {
+            transform: translateY(25rem) translateX(-17rem);
+            img {
+              width: 3rem;
+            }
+          }
         }
       }
     }
