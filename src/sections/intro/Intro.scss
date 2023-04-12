@@ -65,6 +65,9 @@
       display: flex;
       flex: 0.8;
     }
+    @include respond(phone) {
+      flex: 0.6;
+    }
 
     .imgContainer {
       width: 60rem;
@@ -88,7 +91,7 @@
       }
 
       @include respond(phone) {
-        margin-top: 0.5rem;
+        margin-top: -1rem;
         width: 42.5rem;
         height: 42.5rem;
       }
