@@ -1,29 +1,21 @@
-import Topbar from "./components/topbar/Topbar";
-import Intro from "./sections/intro/Intro";
-import Portfolio from "./sections/portfolio/Portfolio";
-import Works from "./sections/works/Works";
-import Contact from "./sections/contact/Contact";
-import Testimonials from "./sections/Testimonials/Testimonials";
-import Menu from "./components/menu/Menu";
-import "./app.scss";
-import { useState } from "react";
+import "./App.scss";
+import Home from "./pages/Home";
+import ProductList from "./pages/ProductList/ProductList";
+import ProductPage from "./pages/ProductPage/ProductPage";
+import Register from "./pages/Register/Register";
+import Login from "./pages/login/Login";
+import Navbar from "./components/Navbar/Navbar";
+import Announcement from "./components/Announcement/Announcement";
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+const App = () => {
   return (
     <div className="app">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Navbar />
       <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Works />
-        <Testimonials />
-        <Contact />
+        <Home />
       </div>
     </div>
   );
-}
+};
 
 export default App;

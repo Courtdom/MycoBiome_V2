@@ -1,4 +1,4 @@
-@import "./global.scss";
+@import "./Global.scss";
 
 html {
   // This defines what 1 rem is
@@ -20,13 +20,13 @@ html {
 
 .app {
   height: 100vh;
-
+  overflow-x: hidden;
   .sections {
     width: 100%;
-    height: calc(100vh - 7rem);
+    height: calc(100vh - 8rem);
     background-color: white;
     position: relative;
-    top: 7rem;
+    top: 8rem;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none; //for firefox
@@ -35,11 +35,11 @@ html {
       display: none;
     }
 
-    > * {
-      width: 100vw;
-      height: calc(100vh - 7rem);
-      scroll-snap-align: start;
-      user-select: none;
-    }
+    // > * {
+    //   width: 100vw;
+    //   height: calc(100vh - 8rem);
+    //   scroll-snap-align: start;
+    //   user-select: none;
+    // }
   }
 }

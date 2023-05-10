@@ -1,0 +1,31 @@
+.productList {
+  .container {
+    .header {
+      margin: 1.5rem;
+      font-size: 3.5rem;
+    }
+    .filterContainer {
+      display: flex;
+
+      .filter {
+        margin: 2rem 0rem;
+        span {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-right: 2rem;
+          text-align: left;
+          margin-left: 2rem;
+        }
+
+        select {
+          padding: 1rem;
+          margin-right: 2rem;
+          border-radius: 3.5rem;
+          font-size: 1.75rem;
+          text-align: center;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

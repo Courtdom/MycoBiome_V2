@@ -1,0 +1,13 @@
+.products {
+  .container {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // &:after {
+    //   content: "";
+    //   flex-basis: calc(25% - 20px);
+    //   flex-grow: 1;
+    // }
+  }
+}

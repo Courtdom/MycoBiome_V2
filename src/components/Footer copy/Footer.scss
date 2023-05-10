@@ -1,0 +1,136 @@
+.footer {
+  .container {
+    display: flex;
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+
+      .logo {
+        font-size: 2.5rem;
+        padding-left: 5rem;
+      }
+
+      p {
+        margin: 2rem 0rem;
+        font-size: 1.5rem;
+      }
+
+      .socialContainer {
+        display: flex;
+        .socialIcon {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          color: white;
+          cursor: pointer;
+          border: 2.5px solid white;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 20px;
+          &:nth-child(1) {
+            background-color: #3b5999;
+            box-shadow: 0px 0px 1rem rgba(#3b5999, 0.5);
+            &:hover {
+              box-shadow: 0px 0px 1.25rem rgba(#3b5999, 0.9);
+              transform: scale(1.5);
+            }
+          }
+          &:nth-child(2) {
+            background-color: #e4405f;
+            box-shadow: 0px 0px 1rem rgba(#e4405f, 0.5);
+            &:hover {
+              box-shadow: 0px 0px 1.25rem rgba(#e4405f, 0.9);
+              transform: scale(1.5);
+            }
+          }
+          &:nth-child(3) {
+            background-color: #0077b5;
+            box-shadow: 0px 0px 1rem rgba(#0077b5, 0.5);
+            &:hover {
+              box-shadow: 0px 0px 1.25rem rgba(#0077b5, 1);
+              transform: scale(1.5);
+            }
+          }
+          &:nth-child(4) {
+            background-color: #55acee;
+            box-shadow: 0px 0px 1rem rgba(#55acee, 0.6);
+            &:hover {
+              box-shadow: 0px 0px 1.25rem rgba(#55acee, 1);
+              transform: scale(1.5);
+            }
+          }
+
+          svg {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+
+    .center {
+      flex: 1;
+      padding: 2rem;
+
+      h3 {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        padding-left: 9rem;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+          width: 50%;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          &:hover {
+            color: #3b5999;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      h3 {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+
+        padding-right: 5rem;
+      }
+
+      .contactItem {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 1.75rem;
+
+        svg {
+          margin-left: 1rem;
+          font-size: 2rem;
+        }
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

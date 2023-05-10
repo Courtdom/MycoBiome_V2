@@ -1,0 +1,13 @@
+@import "../../Global.scss";
+
+.categories {
+  border-top: 0.25rem solid $secondaryBrown;
+  border-bottom: 0.25rem solid $secondaryBrown;
+  .container {
+    display: flex;
+    padding: 2.5rem 1rem;
+    // margin: 1rem 0rem;
+    justify-content: space-evenly;
+    background-color: rgba($lightMoss, 0.9);
+  }
+}

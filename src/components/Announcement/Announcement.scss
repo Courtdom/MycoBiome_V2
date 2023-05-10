@@ -1,0 +1,17 @@
+@import "../../Global.scss";
+
+.announcement {
+  .container {
+    height: 3rem;
+    background-color: #656d4a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+  }
+}

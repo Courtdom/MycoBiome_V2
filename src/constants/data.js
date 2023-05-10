@@ -1,273 +1,117 @@
-export const featuredPortfolio = [
-  {
-    id: 1443,
-    selectedId: "featured",
-    title: "Cold Realm",
-    img: "assets/coldrealm.png",
-    img: "assets/coldrealm.png",
-    images: [
-      "assets/coldrealm-1.png",
-      "assets/coldrealm-2.png",
-      "assets/coldrealm-3.png",
-    ],
-    projectLink: "https://courtdom.itch.io/cold-realm",
-    codeLink: "https://github.com/Courtdom/Cold-Realm-Redux",
-    desc: "Platformer solo project made using C# and Unity",
-  },
-  {
-    id: 25434,
-    selectedId: "featured",
-    title: "Dashboard Management",
-    img: "assets/dashboard.png",
-    images: [
-      "assets/dashboard-1.png",
-      "assets/dashboard-2.png",
-      "assets/dashboard-3.png",
-    ],
-    projectLink: "https://shoppy-dashboard-eta.vercel.app/",
-    codeLink: "https://github.com/Courtdom/dashboard-project",
-    desc: "Dashboard management site using React and SyncFusion",
-  },
-  {
-    id: 345345,
-    selectedId: "featured",
-    title: "Natours Travel",
-    img: "assets/natours.png",
-    images: [
-      "assets/natours-1.png",
-      "assets/natours-2.png",
-      "assets/natours-3.png",
-    ],
-    projectLink: "https://natours-black.vercel.app/",
-    codeLink: "https://github.com/Courtdom/Natours",
-    desc: "Tour guide Landing Page highlighting SCSS styling",
-  },
-
-  {
-    id: 445343,
-    selectedId: "featured",
-    title: "Lyriks Music App",
-    img: "assets/Lyrics.png",
-    images: [
-      "assets/lyriks-1.png",
-      "assets/lyriks-2.png",
-      "assets/lyriks-3.png",
-    ],
-    projectLink: "https://matthew-lyriks-ap.netlify.app/",
-    codeLink: "https://github.com/Courtdom/Lyriks",
-    desc: "Spotify clone using APIs, React and Redux",
-  },
-];
-export const webPortfolio = [
-  {
-    id: 1437,
-    selectedId: "web",
-    title: "Realtor Website",
-    img: "assets/Realtor.png",
-    images: [
-      "assets/realtor-1.png",
-      "assets/realtor-2.png",
-      "assets/realtor-3.png",
-    ],
-    projectLink: "https://realestate-eight-beryl.vercel.app/",
-    codeLink: "https://github.com/Courtdom/realestate",
-    desc: "Real estate website using APIs, React, Next js & Framer Motion",
-  },
-
-  {
-    id: 2927,
-    selectedId: "web",
-    title: "Dashboard Management",
-    img: "assets/dashboard.png",
-    images: [
-      "assets/dashboard-1.png",
-      "assets/dashboard-2.png",
-      "assets/dashboard-3.png",
-    ],
-    projectLink: "https://shoppy-dashboard-eta.vercel.app/",
-    codeLink: "https://github.com/Courtdom/dashboard-project",
-    desc: "Dashboard management site using React and SyncFusion",
-  },
-
-  {
-    id: 3834,
-    selectedId: "web",
-    title: "Lyriks Music App",
-    img: "assets/Lyrics.png",
-    images: [
-      "assets/lyriks-1.png",
-      "assets/lyriks-2.png",
-      "assets/lyriks-3.png",
-    ],
-    projectLink: "https://matthew-lyriks-ap.netlify.app/",
-    codeLink: "https://github.com/Courtdom/Lyriks",
-    desc: "Spotify clone using APIs, React and Redux",
-  },
-  {
-    id: 4881,
-    selectedId: "web",
-    title: "Meta Madness",
-    img: "assets/meta.png",
-    images: ["assets/meta-1.png", "assets/meta-2.png", "assets/meta-3.png"],
-    projectLink: "https://metaversus-three-drab.vercel.app/",
-    codeLink: "https://github.com/Courtdom/Metaversus",
-    desc: "Landing Page using Framer Motion and Tailwind",
-  },
-];
-export const designPortfolio = [
-  {
-    id: 1375,
-    selectedId: "design",
-    title: "Natours Travel",
-    img: "assets/natours.png",
-    images: [
-      "assets/natours-1.png",
-      "assets/natours-2.png",
-      "assets/natours-3.png",
-    ],
-    projectLink: "https://natours-black.vercel.app/",
-    codeLink: "https://github.com/Courtdom/Natours",
-    desc: "Tour guide Landing Page highlighting SCSS styling",
-  },
-  {
-    id: 2754,
-    selectedId: "design",
-    title: "Gericht Restaurant",
-    img: "assets/restaurant.png",
-    images: [
-      "assets/gericht-1.png",
-      "assets/gericht-2.png",
-      "assets/gericht-3.png",
-    ],
-    projectLink: "https://modern-restaurant-site-five.vercel.app/",
-    codeLink: "https://github.com/Courtdom/Modern-Restaurant-Site",
-    desc: "Slick and modern landing page following a Figma template",
-  },
-
-  {
-    id: 3556,
-    selectedId: "design",
-    title: "Meta Madness",
-    img: "assets/meta.png",
-    images: ["assets/meta-1.png", "assets/meta-2.png", "assets/meta-3.png"],
-    projectLink: "https://metaversus-three-drab.vercel.app/",
-    codeLink: "https://github.com/Courtdom/Metaversus",
-    desc: "Landing Page using Framer Motion and Tailwind",
-  },
-  {
-    id: 4534,
-    selectedId: "design",
-    title: "Hoobank",
-    img: "assets/hoobank.png",
-    images: [
-      "assets/hoobank-1.png",
-      "assets/hoobank-2.png",
-      "assets/hoobank-3.png",
-    ],
-    projectLink: "https://matthewsmodern-buisnesswebsite.com/",
-    codeLink: "https://github.com/Courtdom/moo-landing",
-    desc: "A modern UI/UX landing page for a banking transaction business ",
-  },
-];
-export const reactPortfolio = [
-  {
-    id: 1443,
-    selectedId: "react",
-    title: "Realtor Website",
-    img: "assets/Realtor.png",
-    images: [
-      "assets/realtor-1.png",
-      "assets/realtor-2.png",
-      "assets/realtor-3.png",
-    ],
-    projectLink: "https://realestate-eight-beryl.vercel.app/",
-    codeLink: "https://github.com/Courtdom/realestate",
-    desc: "Real estate website using APIs, React, Next js & Framer Motion",
-  },
-
-  {
-    id: 2335,
-    selectedId: "react",
-    title: "Dashboard Management",
-    img: "assets/dashboard.png",
-    images: [
-      "assets/dashboard-1.png",
-      "assets/dashboard-2.png",
-      "assets/dashboard-3.png",
-    ],
-    projectLink: "https://shoppy-dashboard-eta.vercel.app/",
-    codeLink: "https://github.com/Courtdom/dashboard-project",
-    desc: "Dashboard management site using React and SyncFusion",
-  },
-
-  {
-    id: 3998,
-    selectedId: "react",
-    title: "Lyriks Music App",
-    img: "assets/Lyrics.png",
-    images: [
-      "assets/lyriks-1.png",
-      "assets/lyriks-2.png",
-      "assets/lyriks-3.png",
-    ],
-    projectLink: "https://matthew-lyriks-ap.netlify.app/",
-    codeLink: "https://github.com/Courtdom/Lyriks",
-    desc: "Spotify clone using APIs, React and Redux",
-  },
-  {
-    id: 4881,
-    selectedId: "react",
-    title: "Meta Madness",
-    img: "assets/meta.png",
-    images: ["assets/meta-1.png", "assets/meta-2.png", "assets/meta-3.png"],
-    projectLink: "https://metaversus-three-drab.vercel.app/",
-    codeLink: "https://github.com/Courtdom/Metaversus",
-    desc: "Landing Page using Framer Motion and Tailwind",
-  },
-];
-export const mobilePortfolio = [];
-export const worksData = [
-  {
-    id: "1",
-    icon: "./assets/webdev.png",
-    title: "Frontend Development",
-    desc: " I take great pleasure in designing websites with sleek and polished aesthetics. Leveraging SCSS, I am able to code the appearance of elements with precision and finesse. I utilize Framer Motion and SCSS to craft engaging and immersive animations that captivate and enthrall visitors. By incorporating breakpoints, I ensure that my designs remain responsive and accessible on any device ",
-    img: "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
-  },
-  {
-    id: "2",
-    icon: "./assets/backend.png",
-    title: "Web Development",
-    desc: " I have experience developing numerous websites, including those for clients. My go-to framework is React, which offers a plethora of tools to create exceptional websites. In addition to front-end development, I have worked with backend technologies such as MongoDB and Strapi to build robust web applications. I also have experience working with APIs to gather and manipulate data, allowing me to create dynamic and responsive websites",
-    img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
-  },
-  {
-    id: "3",
-    icon: "./assets/unity.png",
-    title: "Game Development",
-    desc: "My journey into programming began with game development. Seeking to challenge myself and learn proper code structure and architecture, I built a platformer game on the Unity engine. This taught me how to properly order script, state management, and code refractoring, which taught me a great deal about coding principles and provided a solid foundation for learning other programming languages.",
-    img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
-  },
-];
-export const testimonialData = [
+export const bannerData = [
   {
     id: 1,
-    name: "Maxim Maltsev",
-    title: "Senior Developer, Buchbaum",
-    img: "./assets/maxim.jpeg",
-    icon: "assets/mobile.png",
-    desc: "Matthew was an invaluable asset to our website project. He was able to enhance the visual appeal of our site with his skillful use of attractive styles and animations, while also being a great communicator throughout the process",
-    featured: true,
-    linked: "https://www.linkedin.com/in/maximmaltsev/",
+    img: "/yellowoyster_banner.jpeg",
+    title: "START GROWING WITH US",
+    desc: "HIGHEST QUALITY SELECTION OF LIVECULTURES AND SPAWN PLUGS AVAILABLE",
+    bg: "f5fafd",
+    btn: "GROW NOW",
   },
   {
     id: 2,
-    name: "Donatas Ahinsa",
-    title: "Co-Founder, MycoBiome",
-    img: "./assets/donatas.jpg",
-    icon: "assets/mobile.png",
-    desc: "Matthew developed my ecommerce website for my business.He far exceeded my expectations, always had great communication skills and always patient enough to work through my ideas and convert them into a website I'm very proud to own",
-    featured: true,
-    linked: "https://www.linkedin.com/in/donatas-ahinsa-5762ba201/",
+    img: "/turkeytail_banner.jpg",
+    title: "GRAND OPENING SALE",
+    desc: "CELEBRATING OUR OPENING ENJOY SALES ON THE HIGHEST QUALITY PRODUCTS",
+    bg: "fcf1ed",
+    btn: "SHOP NOW",
+  },
+  {
+    id: 3,
+    img: "/chantrelle_banner.jpg",
+    title: "MYCOBIOME",
+    desc: "Mycobiome is a Lithuanian pioneering biotech company that specialises in gourmet and medicinal fungi products for hobbyists and professional growers alike. ",
+    bg: "fbf0f4",
+    btn: "LEARN MORE",
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    img: "/growkit.jpg",
+    title: "Grow Kits",
+    btn: "Coming Soon",
+  },
+  {
+    id: 2,
+    img: "/syringe.jpg",
+    title: "Live Cultures",
+    btn: "Shop Now",
+  },
+  {
+    id: 3,
+    img: "/spawn_plugs.jpg",
+    title: "Spawn Plugs",
+    btn: "Shop Now",
+  },
+  {
+    id: 4,
+    img: "/basket.jpg",
+    title: "Fresh Mushrooms",
+    btn: "Coming Soon",
+  },
+];
+export const logoImages = [
+  {
+    id: 1,
+    img: "/mycobiome_logo.jpg",
+  },
+  {
+    id: 2,
+    img: "/mycobiome_logosmall.jpg",
+  },
+  {
+    id: 3,
+    img: "/mycobiome_title.jpg",
+  },
+];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: "/syringe.jpg",
+    category: "culture",
+    title: "Yellow Oyster",
+  },
+  {
+    id: 2,
+    img: "/syringe.jpg",
+    category: "culture",
+    category: "culture",
+    title: "Pink Oyster",
+  },
+  {
+    id: 3,
+    img: "/syringe.jpg",
+    category: "culture",
+    title: "Lion's Mane",
+  },
+  {
+    id: 4,
+    img: "/syringe.jpg",
+    category: "culture",
+    title: "Shitake 1",
+  },
+  {
+    id: 5,
+    img: "/syringe.jpg",
+    category: "culture",
+    title: "Shitake 2",
+  },
+  {
+    id: 6,
+    img: "/syringe.jpg",
+    category: "plug",
+    title: "Yellow Oyster",
+  },
+  {
+    id: 7,
+    img: "/syringe.jpg",
+    category: "plug",
+    title: "Pink Oyster",
+  },
+  {
+    id: 8,
+    img: "/syringe.jpg",
   },
 ];
